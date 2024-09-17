@@ -56,7 +56,6 @@ impl Order {
         }
         self.unit_price = unit_price;
     }
-            
 
     pub fn total(&self) -> u32 {
         self.quantity * self.unit_price
@@ -73,6 +72,4 @@ impl Order {
     pub fn unit_price(&self) -> &u32 {
         &self.unit_price
     }
-    
-    
 }

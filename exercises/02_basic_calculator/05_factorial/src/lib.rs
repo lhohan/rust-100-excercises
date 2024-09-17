@@ -41,5 +41,4 @@ mod tests {
     fn fifth() {
         assert_eq!(factorial(5), 120);
     }
-    
 }

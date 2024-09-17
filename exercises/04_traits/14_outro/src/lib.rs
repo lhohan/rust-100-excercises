@@ -19,7 +19,6 @@ impl SaturatingU16 {
     fn from(value: u16) -> Self {
         Self { value }
     }
-    
 }
 
 impl From<u16> for SaturatingU16 {
@@ -31,7 +30,7 @@ impl From<u16> for SaturatingU16 {
 impl From<u8> for SaturatingU16 {
     fn from(value: u8) -> Self {
         Self::from(value as u16)
-    }   
+    }
 }
 
 impl From<&u16> for SaturatingU16 {
@@ -82,5 +81,4 @@ impl PartialEq<u16> for SaturatingU16 {
     fn eq(&self, other: &u16) -> bool {
         self.value == *other
     }
-}   
-
+}

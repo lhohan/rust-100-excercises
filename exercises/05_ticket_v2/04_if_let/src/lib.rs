@@ -11,7 +11,7 @@ impl Shape {
         let Shape::Circle { radius } = self else {
             panic!("This shape is not a circle");
         };
-        *radius  
+        *radius
     }
 }
 

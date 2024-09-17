@@ -31,7 +31,6 @@ impl Ticket {
         if description.len() > 500 {
             panic!("Description cannot be longer than 500 bytes");
         }
-    
 
         Ticket {
             title,

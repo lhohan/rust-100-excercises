@@ -2,7 +2,7 @@
 //  You *can't* modify the test.
 
 use std::ops::Add;
-#[derive(Debug,Copy,Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct WrappingU32 {
     value: u32,
 }
@@ -10,7 +10,9 @@ pub struct WrappingU32 {
 impl Add<WrappingU32> for WrappingU32 {
     type Output = WrappingU32;
     fn add(self, other: WrappingU32) -> Self::Output {
-        Self { value: self.value.wrapping_add(other.value) }
+        Self {
+            value: self.value.wrapping_add(other.value),
+        }
     }
 }
 

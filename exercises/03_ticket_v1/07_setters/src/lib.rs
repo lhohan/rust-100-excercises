@@ -63,7 +63,7 @@ impl Ticket {
             panic!("Only `To-Do`, `In Progress`, and `Done` statuses are allowed");
         }
     }
-     
+
     fn validate_title(title: &String) -> () {
         if title.is_empty() {
             panic!("Title cannot be empty");
@@ -73,8 +73,6 @@ impl Ticket {
         }
     }
 }
-
-
 
 #[cfg(test)]
 mod tests {

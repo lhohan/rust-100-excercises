@@ -6,7 +6,6 @@ pub struct Ticket {
     status: String,
 }
 
-
 impl Ticket {
     pub fn new(title: String, description: String, status: String) -> Ticket {
         if title.is_empty() {

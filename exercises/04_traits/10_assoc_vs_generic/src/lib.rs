@@ -25,7 +25,7 @@ impl Power<u16> for u32 {
         for _ in 0..n {
             result *= self;
         }
-        result  
+        result
     }
 }
 
@@ -36,7 +36,7 @@ impl Power<u32> for u32 {
         for _ in 0..n {
             result *= self;
         }
-        result  
+        result
     }
 }
 
@@ -47,7 +47,7 @@ impl Power<&u32> for u32 {
         for _ in 0..*n {
             result *= self;
         }
-        result  
+        result
     }
 }
 
