@@ -18,6 +18,7 @@
           packages = [
             pkgs.just
             pkgs.cargo
+            pkgs.rustc
           ];
         };
       });
