@@ -1,5 +1,6 @@
 // TODO: Implement `Index<&TicketId>` and `Index<TicketId>` for `TicketStore`.
 
+use std::ops::Index;
 use ticket_fields::{TicketDescription, TicketTitle};
 
 #[derive(Clone)]
@@ -10,6 +11,22 @@ pub struct TicketStore {
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct TicketId(u64);
+
+impl Index<&TicketId> for TicketStore {
+    type Output = Ticket;
+
+    fn index(&self, index: &TicketId) -> &Self::Output {
+        self.get(*index).expect("ticket not found")
+    }
+}
+
+impl Index<TicketId> for TicketStore {
+    type Output = Ticket;
+
+    fn index(&self, index: TicketId) -> &Self::Output {
+        self.get(index).expect("ticket not found")
+    }
+}
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct Ticket {
